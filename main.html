@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Booking Page</title>
+  <link rel="stylesheet" href="style.css">
+ 
+
+</head>
+<body class="gradient-bg">
+  <header class="app-header">
+    <div class="logo">AeroFly</div>
+    <!-- give this an id so script.js can set initials -->
+    <div id="userAvatar" class="user-avatar">JD</div>
+  </header>
+
+  <div id="mainAlert" class="alert hidden">
+    You are browsing as a guest. <a href="login.html">Log in</a> to save your bookings.
+  </div>
+
+  <!-- Welcome Section -->
+  <div class="main-content">
+    <h1 id="welcomeMsg">Welcome, Traveller!</h1>
+    <p>Search and compare flights from hundreds of airlines</p>
+
+    <a href="index.html">⬅ Back to Home</a>
+  </div>
+
+  <!-- Main Container for Flight Booking -->
+  <div class="container">
+    <h2>Find Your Perfect Flight</h2>
+
+    <!-- Flight Search Section -->
+    <div class="section">
+      <label>From:</label>
+      <input type="text" id="from" placeholder="Enter departure city">
+
+      <label>To:</label>
+      <input type="text" id="to" placeholder="Enter destination city">
+
+      <label>Departure Date:</label>
+      <input type="date" id="departDate">
+
+      <label>Return Date:</label>
+      <input type="date" id="returnDate">
+
+      <br>
+<button id="searchBtn" type="button" class="search-btn">
+  Search Flights
+</button>
+    </div>
+
+    <!-- Available Flights -->
+    <div class="section" id="flights">
+      <h3>Available Flights</h3>
+      <div id="flightResults">No flights searched yet.</div>
+    </div>
+
+    <!-- main Login Prompt -->
+    <div class="login-section">
+      <h3>Login Required</h3>
+      <p>Please log in to complete your booking</p>
+      <button onclick="window.location.href='login.html'">Login</button>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

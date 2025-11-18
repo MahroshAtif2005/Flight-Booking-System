@@ -1,0 +1,78 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AeroFly — Bookings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">AeroFly</header>
+
+  <main class="page">
+    <div class="title-row">
+      <h2 style="margin:0">Your Booking</h2>
+      <div class="subtitle">Manage reservation</div>
+    </div>
+
+    <div class="grid">
+      <div>
+        <div class="card" id="bookingCard">
+          <div class="section-title">Booking Details</div>
+
+          <div style="margin-top:12px;">
+            <div>
+              <strong>Booking reference:</strong>
+            
+              <span class="subtitle" id="bRef">[BOOKING REF]</span>
+            </div>
+
+            <div style="margin-top:6px">
+              <strong>Route:</strong>
+            
+              <span class="subtitle" id="bRoute">[PLACEHOLDER]</span>
+            </div>
+
+            <div style="margin-top:6px">
+              <strong>Date:</strong>
+             
+              <span class="subtitle" id="bDate">[PLACEHOLDER]</span>
+            </div>
+
+            <div style="margin-top:6px">
+              <strong>Class:</strong>
+              <span id="bClass" class="subtitle">—</span>
+            </div>
+
+            <div style="margin-top:12px">
+              <strong>Passengers & meals</strong>
+              <ul style="margin:8px 0 0 18px; padding:0">
+                <li>Passenger 1 — <span id="bMeal1" class="subtitle">—</span></li>
+                <li>Passenger 2 — <span id="bMeal2" class="subtitle">—</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;" class="row">
+            <button class="btn ghost" onclick="modifyBooking()">Modify Booking</button>
+            <button class="btn" style="background:#e63946" onclick="cancelBooking()">Cancel Booking</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="card">
+          <div class="section-title">Payment</div>
+          <div class="subtitle" style="margin-top:8px">
+            Total paid:
+            <strong id="bTotal">[TOTAL]</strong>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

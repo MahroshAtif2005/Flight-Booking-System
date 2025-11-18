@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AeroFly — Booking Confirmed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">✈️ AeroFly</header>
+    
+    <main class="page">
+        <div class="title-row">
+            <h2 style="margin:0">✓ Booking Confirmed!</h2>
+            <div class="subtitle">Your reservation has been successfully completed</div>
+        </div>
+
+        <div class="grid">
+
+            <div>
+                <!-- Booking Reference Card -->
+                <div class="card reference-card">
+                    <p>Your Booking Reference</p>
+                    <!-- 👇 this id MUST be bookingRef -->
+                    <p class="big-ref" id="bookingRef">—</p>
+                </div>
+
+                <!-- Flight Details Card -->
+                <div class="card">
+                    <h3>✈ Flight Details</h3>
+                    <p><strong>Flight:</strong> <span id="flightNum">—</span></p>
+                    <p><strong>Route:</strong> <span id="route">—</span></p>
+                    <p><strong>Date:</strong> <span id="date">—</span></p>
+                    <p><strong>Class:</strong> <span id="flightClass">—</span></p>
+                </div>
+
+                <!-- Passenger Details Card -->
+                <div class="card">
+                    <h3>👥 Passengers</h3>
+                    <p>Total Passengers: 2</p>
+
+                    <p><strong>Meal Preferences</strong></p>
+                    <ul>
+                        <li>Passenger 1: <span id="meal1">—</span></li>
+                        <li>Passenger 2: <span id="meal2">—</span></li>
+                    </ul>
+                </div>
+
+                <!-- Cancellation Policy Card -->
+                <div class="card" style="background:#fff7ed; border-color:#fb923c;">
+                    <div class="section-title">Cancellation & Change Policy</div>
+                    <ul style="margin:12px 0 0 20px; padding:0; list-style:disc; color:#9a3412;">
+                        <li>Free cancellation up to 24 hours before departure with $50 fee</li>
+                        <li style="margin-top:6px">Changes allowed subject to fare difference and $75 change fee</li>
+                        <li style="margin-top:6px">No-show will result in forfeiture of ticket value</li>
+                        <li style="margin-top:6px">Refunds processed within 7-10 business days</li>
+                    </ul>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="row">
+                    <button class="btn" onclick="window.location.href='bookings.html'">
+                        View Booking Details
+                    </button>
+                    <button class="btn ghost" onclick="window.location.href='main.html'">
+                        Book Another Flight
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Payment Summary Card -->
+                <div class="card">
+                    <div class="section-title">💳 Payment Summary</div>
+                    <div style="margin-top:12px;">
+                        <div class="summary-line">
+                            <div>Status</div>
+                            <div style="color:#16a34a; font-weight:600">✓ Paid</div>
+                        </div>
+                        <div class="summary-total">
+                            <div>Total Paid</div>
+                     
+                            <div id="totalPaid">—</div>
+                        </div>
+                        <div style="margin-top:12px; padding-top:12px; border-top:1px solid #e9e8f4;">
+                            <div class="subtitle" style="font-size:0.85rem">
+                                Payment successful via credit card
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Important Information Card -->
+                <div class="card" style="background:#eff6ff; border-color:#bfdbfe;">
+                    <div class="section-title">ℹ Important Information</div>
+                    <ul style="margin:12px 0 0 20px; padding:0; list-style:disc; color:#1e40af; font-size:0.9rem;">
+                        <li>Check-in opens 24 hours before departure</li>
+                        <li style="margin-top:6px">Arrive at airport at least 2 hours early</li>
+                        <li style="margin-top:6px">Valid ID and travel documents required</li>
+                        <li style="margin-top:6px">Save this confirmation for your records</li>
+                    </ul>
+                </div>
+
+                <!-- Quick Actions Card -->
+                <div class="card">
+                    <div class="section-title">Quick Actions</div>
+                    <div style="margin-top:12px; display:flex; flex-direction:column; gap:10px;">
+                        <button class="btn ghost" onclick="printConfirmation()">Print Confirmation</button>
+                        <button class="btn ghost" onclick="emailConfirmation()">Email Confirmation</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AeroFly — Class & Meals</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">AeroFly</header>
+
+  <main class="page">
+    <div class="title-row">
+      <h2 style="margin:0">Select Class & Meal Preferences</h2>
+      <div class="subtitle">Choose cabin and meal choices for each passenger</div>
+    </div>
+
+    <div class="grid">
+  
+      <div>
+        <!-- Flight details card -->
+        <div class="card">
+          <div class="section-title">Flight Details</div>
+          <div style="margin-top:12px; display:flex; gap:12px; align-items:center;">
+            <div style="flex:1;">
+              <div>
+                <strong>Route:</strong>
+                <span class="subtitle" id="detail-route">[PLACEHOLDER]</span>
+              </div>
+              <div style="margin-top:6px">
+                <strong>Date:</strong>
+                <span class="subtitle" id="detail-date">[PLACEHOLDER]</span>
+              </div>
+              <div style="margin-top:6px">
+                <strong>Passengers:</strong>
+                <span class="subtitle" id="detail-passengers">2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Class selection card -->
+        <div class="card" style="margin-top:14px;">
+          <div class="section-title">Select Class</div>
+          <div class="subtitle">Tap to choose a cabin</div>
+
+          <div class="class-row" style="margin-top:12px;">
+            <div class="class-card" id="card-economy" onclick="selectClass('Economy')">
+              <div style="font-weight:700">Economy</div>
+              <div class="subtitle" style="margin-top:8px">Standard seating</div>
+            </div>
+
+            <div class="class-card" id="card-business" onclick="selectClass('Business')">
+              <div style="font-weight:700">Business</div>
+              <div class="subtitle" style="margin-top:8px">Premium comfort</div>
+            </div>
+
+            <div class="class-card" id="card-first" onclick="selectClass('First Class')">
+              <div style="font-weight:700">First Class</div>
+              <div class="subtitle" style="margin-top:8px">Luxury suite</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meal selection card -->
+        <div class="card" style="margin-top:14px;">
+          <div class="section-title">Meal Preferences</div>
+          <div class="subtitle">Select one per passenger</div>
+
+          <!-- Passenger 1 -->
+          <div class="passenger-block">
+            <h4 style="margin:0 0 8px 0">Passenger 1</h4>
+            <div class="meal-grid">
+              <div class="meal-card" id="p1-veg"   onclick="selectMeal(1,'Vegetarian')">Vegetarian</div>
+              <div class="meal-card" id="p1-non"   onclick="selectMeal(1,'Non-Vegetarian')">Non-Vegetarian</div>
+              <div class="meal-card" id="p1-halal" onclick="selectMeal(1,'Halal')">Halal</div>
+              <div class="meal-card" id="p1-kosher"onclick="selectMeal(1,'Kosher')">Kosher</div>
+            </div>
+          </div>
+
+          <!-- Passenger 2 -->
+          <div class="passenger-block">
+            <h4 style="margin:16px 0 8px 0">Passenger 2</h4>
+            <div class="meal-grid">
+              <div class="meal-card" id="p2-veg"   onclick="selectMeal(2,'Vegetarian')">Vegetarian</div>
+              <div class="meal-card" id="p2-non"   onclick="selectMeal(2,'Non-Vegetarian')">Non-Vegetarian</div>
+              <div class="meal-card" id="p2-halal" onclick="selectMeal(2,'Halal')">Halal</div>
+              <div class="meal-card" id="p2-kosher"onclick="selectMeal(2,'Kosher')">Kosher</div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="row" style="margin-top:16px;">
+            <button class="btn" type="button" onclick="saveAndContinue()">Continue</button>
+            <button class="btn ghost" type="button" onclick="resetSelections()">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="card">
+          <div class="section-title">Price Summary</div>
+          <div class="subtitle" style="margin-top:8px">Review estimated total</div>
+
+          <div style="margin-top:12px;">
+            <div class="summary-line">
+              <div>Route</div>
+              <div class="subtitle" id="summary-route">[PLACEHOLDER]</div>
+            </div>
+
+            <div class="summary-line">
+              <div>Date</div>
+              <div class="subtitle" id="summary-date">[PLACEHOLDER]</div>
+            </div>
+
+            <div class="summary-line">
+              <div>Passengers</div>
+              <div class="subtitle" id="summary-passengers">2</div>
+            </div>
+
+            <div class="summary-line">
+              <div>Class</div>
+              <div class="subtitle" id="sidebar-class">—</div>
+            </div>
+
+            <div class="summary-total" style="display:flex;justify-content:space-between;margin-top:12px">
+              <div>Total</div>
+              <div class="subtitle" id="sidebar-price">[PRICE]</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Page-specific logic (but all in script.js) -->
+  <script src="script.js"></script>
+</body>
+</html>

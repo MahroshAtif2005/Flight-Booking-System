@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AeroFly — Payment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">AeroFly</header>
+
+  <main class="page">
+    <div class="title-row">
+      <h2 style="margin:0">Payment</h2>
+      <div class="subtitle">Review and complete your booking</div>
+    </div>
+
+    <div class="grid">
+      <div>
+        <!-- BOOKING SUMMARY -->
+        <div class="card">
+          <div class="section-title">Booking Summary</div>
+          <div class="subtitle">Verify the selections below</div>
+
+          <div style="margin-top:12px;">
+            <div>
+              <strong>Route:</strong>
+           
+              <span class="subtitle" id="showRoute">[PLACEHOLDER]</span>
+            </div>
+            <div style="margin-top:6px">
+              <strong>Date:</strong>
+              
+              <span class="subtitle" id="showDate">[PLACEHOLDER]</span>
+            </div>
+            <div style="margin-top:6px">
+              <strong>Passengers:</strong>
+              <span class="subtitle">2</span>
+            </div>
+            <div style="margin-top:6px">
+              <strong>Class:</strong>
+           
+              <span id="showClass" class="subtitle">—</span>
+            </div>
+
+            <div style="margin-top:12px">
+              <strong>Meals</strong>
+              <ul style="margin:8px 0 0 18px; padding:0">
+                <li>Passenger 1 — <span id="showMeal1" class="subtitle">—</span></li>
+                <li>Passenger 2 — <span id="showMeal2" class="subtitle">—</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAYMENT DETAILS -->
+        <div class="card" style="margin-top:14px;">
+          <div class="section-title">Payment Details</div>
+          <div class="subtitle">Enter card information</div>
+
+          <div style="margin-top:12px; display:grid; gap:10px;">
+     
+            <input type="text" id="cardName" placeholder="Cardholder name" />
+            <input type="text" id="cardNumber" placeholder="Card number" />
+            <div style="display:flex; gap:10px;">
+              <input type="text" placeholder="MM/YY" style="flex:1" />
+              <input type="text" placeholder="CVC" style="width:110px" />
+            </div>
+
+            <div style="margin-top:12px; display:flex; gap:12px;">
+              <button class="btn" onclick="payNow()">Pay</button>
+              <button class="btn ghost" onclick="location.href='class.html'">Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="card">
+          <div class="section-title">Price Summary</div>
+          <div style="margin-top:10px;">
+            <div class="summary-line">
+              <div>Base fare (x2)</div>
+            
+              <div class="subtitle" id="baseFare">[PRICE]</div>
+            </div>
+            <div class="summary-line">
+              <div>Taxes & fees</div>
+             
+              <div class="subtitle">£50.00</div>
+            </div>
+            <div class="summary-line">
+              <div>Meals</div>
+              <div class="subtitle">Included</div>
+            </div>
+
+            <div class="summary-total" style="display:flex;justify-content:space-between">
+              <div>Total</div>
+            
+              <div class="subtitle" id="totalPrice">[TOTAL]</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
